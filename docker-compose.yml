@@ -1,0 +1,14 @@
+version: '4.10'
+
+services:
+  flask:
+    image: flask:teste
+    comand: python/flask/app
+    build:
+    volumes:
+      - ./flask:/flask
+    environment:
+       TZ: America/Fortaleza
+    restart: always
+    ports:
+      - "4005:80"
